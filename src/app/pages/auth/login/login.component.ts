@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   @BlockUI() blockUI: NgBlockUI;
-  constructor(private authService: AuthService, private fb: FormBuilder) {
+  constructor(private authService: AuthService, private fb: FormBuilder, private route:Router) {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
 
     this.authService
       .login(user)
-      .then((e) => console.log(e))
+      .then((e) => this.route.navigate(['/stores']))
       .catch((e) => {
         Swal.fire({
           title: 'Error!',
