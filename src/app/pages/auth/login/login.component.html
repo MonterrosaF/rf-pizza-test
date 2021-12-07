@@ -15,11 +15,13 @@
             <input type="password" formControlName="password" placeholder="Contraseña">
           </span>
         </fieldset>
+        <span>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </span>
+        <button type="submit" [disabled]="!loginForm.valid">
+          Iniciar sesión
+        </button>
       </form>
-      <a href="#">¿Olvidaste tu contraseña?</a>
-      <button>
-        Iniciar sesión
-      </button>
     </section>
   </main>
 </block-ui>
