@@ -4,7 +4,7 @@
       <img src="./../../../../assets/images/Login-Best-Pizza.png" alt="Best Pizza Login">
       <h1>Bienvenido</h1>
       <h2>A las mejores pizzas del país</h2>
-      <form class="login-form" [formGroup]="loginForm">
+      <form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
         <fieldset>
           <span>
             <input type="text" formControlName="email" placeholder="Usuario">
@@ -16,7 +16,7 @@
           </span>
         </fieldset>
         <span>
-          <a href="#">¿Olvidaste tu contraseña?</a>
+          <a href="/login">¿Olvidaste tu contraseña?</a>
         </span>
         <button type="submit" [disabled]="!loginForm.valid">
           Iniciar sesión
