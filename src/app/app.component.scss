@@ -1,0 +1,15 @@
+#main-section {
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-pizza {
+  position: absolute;
+  width: 50%;
+  transform: translateY(25%);
+}
