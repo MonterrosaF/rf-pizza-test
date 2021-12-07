@@ -35,3 +35,15 @@
   outline: none;
   font-family: 'Open Sans', sans-serif;
 }
+
+#page-container {
+  width: 100vw;
+}
+
+.page-section {
+  width: 50vw;
+  background-color: white;
+  height: 100vh;
+  float: right;
+  text-align: center;
+}
