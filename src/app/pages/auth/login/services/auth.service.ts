@@ -3,12 +3,23 @@ import { DataService } from './../../../../shared/services/data.services';
 import { Injectable } from '@angular/core';
 import { User } from './../../../../shared/models/user.interface';
 import { HttpClient } from '@angular/common/http';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient, private dataService: DataService) {}
+  constructor(
+    private http: HttpClient,
+    private dataService: DataService,
+    public jwtHelper: JwtHelperService
+  ) {}
+
+  public isAuthenticated(): boolean {
+    const token = localStorage.getItem('token') || '';
+    if (!token) return false;
+    return !this.jwtHelper.isTokenExpired(token);
+  }
 
   async login(user: User): Promise<User> {
     const { email, password } = user;
@@ -23,7 +34,9 @@ export class AuthService {
     if (userFromJSON.password != password) {
       throw 'Contraseña incorrecta';
     }
-    delete user.password;
-    return user;
+    delete userFromJSON.password;
+    delete userFromJSON.id;
+    localStorage.setItem('jwt', JSON.stringify(userFromJSON));
+    return userFromJSON;
   }
 }
