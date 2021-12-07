@@ -17,8 +17,10 @@ export class AuthService {
 
   public isAuthenticated(): boolean {
     const token = localStorage.getItem('token') || '';
+    console.log(token)
     if (!token) return false;
-    return !this.jwtHelper.isTokenExpired(token);
+    return true;
+    // return !this.jwtHelper.isTokenExpired(token); // Se retorna true en caso de existir token un fake JWT
   }
 
   async login(user: User): Promise<User> {
@@ -36,7 +38,7 @@ export class AuthService {
     }
     delete userFromJSON.password;
     delete userFromJSON.id;
-    localStorage.setItem('jwt', JSON.stringify(userFromJSON));
+    localStorage.setItem('token', JSON.stringify(userFromJSON));
     return userFromJSON;
   }
 }

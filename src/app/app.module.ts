@@ -1,3 +1,4 @@
+import { LoginComponent } from './pages/auth/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,14 +7,18 @@ import { BlockUIModule } from 'ng-block-ui';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StoresComponent } from './pages/stores/stores.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, StoresComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BlockUIModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },

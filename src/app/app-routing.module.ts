@@ -1,14 +1,12 @@
+import { StoresComponent } from './pages/stores/stores.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './pages/auth/login/guards/auth.guard';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./pages/auth/login/login.module').then((m) => m.LoginModule),
-    // canActivate: [AuthGuard],
-  },
+  { path: 'login', component: LoginComponent},
+  { path: 'stores', component: StoresComponent, canActivate: [AuthGuard],},
   { path: '**', redirectTo: 'login' },
 ];
 
