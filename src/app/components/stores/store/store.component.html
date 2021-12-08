@@ -1,5 +1,10 @@
-<section class="store">
-  <img src="./../../../../assets/images/{{ storeData.name }}.png" alt="" />
+<section class="store-main">
+  <div class="single-store">
+    <img src="./../../../../assets/images/{{ storeData.name }}.png" alt="" />
+    <div class="overlay-description overlay-description-blur">
+      <p class="store-description">{{storeData.description}}</p>
+    </div>
+  </div>
   <p>{{ storeData.name }}</p>
   <sub>{{ storeData.address }}</sub>
 </section>

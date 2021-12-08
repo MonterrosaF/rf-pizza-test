@@ -2,8 +2,21 @@ main{
   max-height: 100vh;
 }
 
-div.stores-title{
-  margin-top: 20%;
+.stores-title{
+  text-align: start;
+  font-size: 2rem;
+  margin-left: 3.5rem;
+  margin: 20% 3.5rem 10%;
+}
+
+.stores-title h1{
+  font-weight: 500;
+  margin-bottom: -15px;
+}
+
+.stores-title span{
+  color: hsl(0deg 0% 59%);
+  font-size: 0.9rem;
 }
 
 .stores-container{
@@ -13,4 +26,5 @@ div.stores-title{
   width: 90%;
   justify-content: space-evenly;
   overflow: auto;
+  height: 50vh;
 }

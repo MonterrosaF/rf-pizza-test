@@ -29,8 +29,8 @@ nav {
 }
 
 .router section {
-  margin-top: 10%;
-  margin-left: 10%;
+  margin-top: 50px;
+  margin-left: 3.5rem;
 }
 
 .router section a {
@@ -39,12 +39,12 @@ nav {
   background-image: linear-gradient(hsl(42deg 91% 66%), hsl(42deg 91% 66%));
   background-position: bottom center;
   background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size .3s;
+  background-size: 0% 10px;
+  transition: all .3s;
 }
 
 .router section a:hover {
-  background-size: 100% 2px;
+  background-size: 150% 6px;
 }
 
 .logout {
