@@ -11,9 +11,13 @@ import { StoresComponent } from './pages/stores/stores.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { StoreComponent } from './components/stores/store/store.component';
+import { CommonModule } from '@angular/common';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, StoresComponent],
+  declarations: [AppComponent, LoginComponent, StoresComponent, StoreComponent, FooterComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,6 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    CommonModule,
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },

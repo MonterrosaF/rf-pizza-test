@@ -1,13 +1,18 @@
 <block-ui>
-  <section class="pizza-image-background">
-    <img src="./../../../assets/images/Logo.png" alt="Best Pizza">
-  </section>
-  <main id="page-container">
-    <section class="page-section">
-      <div class="logout" (click)="onLogout()">
-        <i class="fas fa-lock"></i>
-        <span>Salir</span>
-      </div>
+  <main>
+    <section>
+      <section class="page-section">
+        <div class="stores-title">
+          <h1>Tiendas</h1>
+          <sub>Escoge tu pizzería favorita</sub>
+        </div>
+        <section class="stores-container" >
+          <article *ngFor="let store of storesList">
+            <app-store [storeData]="store"></app-store>
+          </article>
+        </section>
+      </section>
     </section>
   </main>
+  <app-footer></app-footer>
 </block-ui>
