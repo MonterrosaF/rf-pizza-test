@@ -1,0 +1,60 @@
+nav {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  float: right;
+  background-color: transparent;
+  max-height: 10vh;
+  color: hsl(0deg 0% 56%);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pizza-image-background {
+  cursor: pointer;
+}
+.pizza-image-background img {
+  max-width: 110px;
+  width: 10vw;
+  margin-top: 4vw;
+  margin-left: 10vw;
+  position: fixed;
+}
+
+.router {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.router section {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.router section a {
+  text-decoration: none;
+  color: hsl(0deg 0% 56%);
+  background-image: linear-gradient(hsl(42deg 91% 66%), hsl(42deg 91% 66%));
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+.router section a:hover {
+  background-size: 100% 2px;
+}
+
+.logout {
+  font-size: 15px;
+  margin-right: 3vw;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.logout i {
+  color: black;
+  margin-right: 10px;
+}

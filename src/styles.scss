@@ -34,10 +34,8 @@
   border: none;
   outline: none;
   font-family: 'Open Sans', sans-serif;
-}
-
-#page-container {
-  width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .page-section {
