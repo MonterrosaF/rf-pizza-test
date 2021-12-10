@@ -18,6 +18,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { StoreModalComponent } from './components/stores/store-modal/store-modal.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     ToastrModule.forRoot(),
     CommonModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },

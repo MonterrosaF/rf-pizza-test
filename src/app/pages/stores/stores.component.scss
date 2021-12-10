@@ -30,3 +30,14 @@ main {
   height: 65vh;
   overflow: scroll;
 }
+
+.search-store {
+  text-align: center;
+  input {
+    border: 1px solid;
+    border-radius: 20px;
+    height: 2rem;
+    padding: 0 10px;
+    width: 80%;
+  }
+}

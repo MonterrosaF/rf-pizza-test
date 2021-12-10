@@ -5,9 +5,14 @@
         <div class="stores-title">
           <h1>Tiendas</h1>
           <span>Escoge tu pizzería favorita</span>
+            <form class="search-store" [formGroup]="searchInput">
+              <span>
+                <input type="text" formControlName="search" placeholder="Buscar tienda..." (input)="onSearch(this.searchInput.get('search').value)">
+              </span>
+            </form>
         </div>
         <section class="stores-container" >
-          <article *ngFor="let store of storesList">
+          <article *ngFor="let store of storesFiltered">
             <app-store [storeData]="store"></app-store>
           </article>
         </section>

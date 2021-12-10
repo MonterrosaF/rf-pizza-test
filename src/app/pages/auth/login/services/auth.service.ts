@@ -30,7 +30,7 @@ export class AuthService {
       (user) => user.email == email
     );
     if (!userFromJSON) {
-      throw 'Usuario inexsistente';
+      throw 'Usuario inexistente';
     }
     if (userFromJSON.password != password) {
       throw 'Contraseña incorrecta';
