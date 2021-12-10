@@ -15,9 +15,20 @@ import { StoreComponent } from './components/stores/store/store.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { StoreModalComponent } from './components/stores/store-modal/store-modal.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, StoresComponent, StoreComponent, FooterComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    StoresComponent,
+    StoreComponent,
+    FooterComponent,
+    NavbarComponent,
+    StoreModalComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,6 +39,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     CommonModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },

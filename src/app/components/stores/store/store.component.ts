@@ -1,5 +1,7 @@
 import { Store } from './../../../shared/models/store.interface';
 import { Component, Input, OnInit } from '@angular/core';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-store',
@@ -10,7 +12,7 @@ export class StoreComponent implements OnInit {
   @Input()
   storeData: Store;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 }
