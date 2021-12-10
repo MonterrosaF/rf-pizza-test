@@ -1,3 +1,5 @@
+@import "./../../../../assets/scss/_variables.scss";
+
 .store-main {
   text-align: initial;
   cursor: pointer;
@@ -23,29 +25,29 @@
   opacity: 0;
   transition: opacity 0.25s;
   border-radius: 10px;
-}
 
-.overlay-description>* {
-  transform: translateY(20px);
-  transition: transform 0.25s;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  max-height: 390px;
-  padding: 0 15px;
-}
+  > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 390px;
+    padding: 0 15px;
+  }
 
-.overlay-description:hover {
-  opacity: 1;
-}
+  &:hover {
+    opacity: 1;
 
-.overlay-description:hover>* {
-  transform: translateY(0px);
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  max-height: 390px;
-  padding: 0 15px;
+    > * {
+      transform: translateY(0px);
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      overflow: hidden;
+      max-height: 390px;
+      padding: 0 15px;
+    }
+  }
 }
 
 .overlay-description-blur {

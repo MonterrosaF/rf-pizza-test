@@ -1,3 +1,5 @@
+@import "./../../../../assets/scss/_variables.scss";
+
 nav {
   position: fixed;
   top: 0px;
@@ -5,7 +7,7 @@ nav {
   float: right;
   background-color: transparent;
   max-height: 10vh;
-  color: hsl(0deg 0% 56%);
+  color: $subtitles-color;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -13,38 +15,39 @@ nav {
 
 .pizza-image-background {
   cursor: pointer;
-}
-.pizza-image-background img {
-  max-width: 110px;
-  width: 10vw;
-  margin-top: 4vw;
-  margin-left: 10vw;
-  position: fixed;
+
+  img {
+    max-width: 110px;
+    width: 10vw;
+    margin-top: 4vw;
+    margin-left: 10vw;
+    position: fixed;
+  }
 }
 
 .router {
   display: flex;
   justify-content: space-between;
   width: 50%;
-}
 
-.router section {
-  margin-top: 50px;
-  margin-left: 3.5rem;
-}
+  section {
+    margin-top: 50px;
+    margin-left: 3.5rem;
 
-.router section a {
-  text-decoration: none;
-  color: hsl(0deg 0% 56%);
-  background-image: linear-gradient(hsl(42deg 91% 66%), hsl(42deg 91% 66%));
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 0% 10px;
-  transition: all .3s;
-}
+    a {
+      text-decoration: none;
+      color: $subtitles-color;
+      background-image: linear-gradient($primary-color, $primary-color);
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: 0% 10px;
+      transition: all .3s;
 
-.router section a:hover {
-  background-size: 150% 6px;
+      &:hover {
+        background-size: 150% 6px;
+      }
+    }
+  }
 }
 
 .logout {
@@ -52,9 +55,9 @@ nav {
   margin-right: 3vw;
   margin-top: 5%;
   cursor: pointer;
-}
 
-.logout i {
-  color: black;
-  margin-right: 10px;
+  i {
+    color: black;
+    margin-right: 10px;
+  }
 }

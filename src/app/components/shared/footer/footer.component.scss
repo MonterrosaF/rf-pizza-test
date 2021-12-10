@@ -1,3 +1,5 @@
+@import "./../../../../assets/scss/_variables.scss";
+
 footer {
   position: fixed;
   bottom: 0px;
@@ -5,21 +7,21 @@ footer {
   min-width: 50vw;
   max-width: 40vw;
   float: right;
-  background-color: hsl(0deg 0% 12%);
+  background-color: #1f1f1f;
   max-height: 10vh;
   display: flex;
   justify-content: space-between;
-}
 
-footer i {
-  color: white;
-  font-size: 30px;
-  margin: 20px 0 0 10px;
-  transition: all .3s;
-}
+  i {
+    color: white;
+    font-size: 30px;
+    margin: 20px 0 0 10px;
+    transition: all .3s;
 
-footer i:hover {
-  color: hsl(42deg 91% 66%)
+    &:hover {
+      color: $primary-color;
+    }
+  }
 }
 
 #social-media {

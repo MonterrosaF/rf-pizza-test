@@ -1,27 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/_variables.scss";
+
 @font-face {
   font-family: KhulaBold;
-  src: url(./assets/fonts/Khula/Khula-Bold.ttf) format('truetype');
+  src: url(./assets/fonts/Khula/Khula-Bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: KhulaExtraBold;
-  src: url(./assets/fonts/Khula/Khula-ExtraBold.ttf) format('truetype');
+  src: url(./assets/fonts/Khula/Khula-ExtraBold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: KhulaLight;
-  src: url(./assets/fonts/Khula/Khula-Light.ttf) format('truetype');
+  src: url(./assets/fonts/Khula/Khula-Light.ttf) format("truetype");
 }
 
 @font-face {
   font-family: KhulaRegular;
-  src: url(./assets/fonts/Khula/Khula-Regular.ttf) format('truetype');
+  src: url(./assets/fonts/Khula/Khula-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: KhulaSemibold;
-  src: url(./assets/fonts/Khula/Khula-SemiBold.ttf) format('truetype');
+  src: url(./assets/fonts/Khula/Khula-SemiBold.ttf) format("truetype");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
@@ -44,6 +45,12 @@
   height: 100vh;
   float: right;
   text-align: center;
+}
+
+@media screen and (max-width: $breakpoint-laptop-sm) {
+  .page-section {
+    width: 100vw;
+  }
 }
 
 // html, body { height: 100%; }

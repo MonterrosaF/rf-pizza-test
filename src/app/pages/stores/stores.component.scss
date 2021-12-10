@@ -1,25 +1,27 @@
-main{
+@import './../../../assets/scss/_variables.scss';
+
+main {
   max-height: 100vh;
 }
 
-.stores-title{
+.stores-title {
   text-align: start;
   font-size: 2rem;
   margin-left: 3.5rem;
   margin: 12% 3.5rem 5%;
+
+  h1 {
+    font-weight: 500;
+    margin-bottom: -3px;
+  }
+
+  span {
+    color: #969696;
+    font-size: 0.9rem;
+  }
 }
 
-.stores-title h1{
-  font-weight: 500;
-  margin-bottom: -3px;
-}
-
-.stores-title span{
-  color: hsl(0deg 0% 59%);
-  font-size: 0.9rem;
-}
-
-.stores-container{
+.stores-container {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
