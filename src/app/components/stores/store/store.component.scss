@@ -26,7 +26,7 @@
   transition: opacity 0.25s;
   border-radius: 10px;
 
-  > * {
+  >* {
     transform: translateY(20px);
     transition: transform 0.25s;
     text-overflow: ellipsis;
@@ -39,7 +39,7 @@
   &:hover {
     opacity: 1;
 
-    > * {
+    >* {
       transform: translateY(0px);
       text-overflow: ellipsis;
       word-wrap: break-word;
@@ -48,11 +48,34 @@
       padding: 0 15px;
     }
   }
+
+  button {
+    max-width: 70%;
+    width: 100%;
+    border-radius: 30px;
+
+    img{
+      width: 20px;
+      display: none;
+    }
+
+    &:hover{
+      background-color: $primary-color;
+      transition: all .3s;
+      span{
+        display: none;
+      }
+      img{
+        display: inline;
+      }
+    }
+  }
 }
 
 .overlay-description-blur {
   backdrop-filter: blur(5px);
 }
+
 
 .overlay-description button:last-child {
   cursor: not-allowed;

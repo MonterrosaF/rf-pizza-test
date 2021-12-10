@@ -1,1 +1,19 @@
-<p>store-modal works!</p>
+<section>
+  <div class="store-product">
+    <img src="./../../../../assets/images/{{storeData.name}} 2.png" class="animate__animated animate__pulse">
+  </div>
+  <div class="store-info">
+    <h1>{{ storeData.name }}</h1>
+    <h3>{{ storeData.description }}</h3>
+
+    <div class="menu-info">
+      <p>Nuestros productos son:</p>
+      <div class="menu">
+        <ul class="animate__animated animate__zoomIn" *ngFor="let item of storeData.products">
+          <li> <button mat-stroked-button> {{ item.name }} </button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="background-image" [ngStyle]="{'background-image': getUrl()}"></div>
+</section>

@@ -33,3 +33,11 @@ footer img {
   padding: 20px 0;
   margin-right: 50px;
 }
+
+@media screen and(max-width: $breakpoint-laptop-sm) {
+
+  footer{
+    width: 100%;
+    max-width: initial;
+  }
+}

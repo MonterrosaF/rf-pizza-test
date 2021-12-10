@@ -61,3 +61,16 @@ nav {
     margin-right: 10px;
   }
 }
+
+@media screen and(max-width: $breakpoint-laptop-sm) {
+
+  .pizza-image-background,
+  .menu {
+    display: none;
+  }
+
+  .router{
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
