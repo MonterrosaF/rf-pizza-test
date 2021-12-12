@@ -19,4 +19,8 @@ export class NavbarComponent implements OnInit {
     this.authService.logout();
     this.route.navigate(['/login']);
   }
+
+  onHomeClick(){
+    this.route.navigate(['/stores']);
+  }
 }

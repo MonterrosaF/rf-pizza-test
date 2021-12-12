@@ -30,10 +30,10 @@ export class AuthService {
       (user) => user.email == email
     );
     if (!userFromJSON) {
-      throw 'Usuario inexistente';
+      throw new Error('Usuario inexistente');
     }
     if (userFromJSON.password != password) {
-      throw 'Contraseña incorrecta';
+      throw new Error('Contraseña incorrecta');
     }
     delete userFromJSON.password;
     delete userFromJSON.id;

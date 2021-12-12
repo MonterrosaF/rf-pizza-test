@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(): void {
+  onSubmit() {
     this.blockUI.start('Cargando...');
 
     let user: User = {

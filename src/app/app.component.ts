@@ -12,8 +12,7 @@ export class AppComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngAfterContentChecked(): void {
     this.isLoginPage = this.router.url.includes('login')

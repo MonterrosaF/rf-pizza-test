@@ -1,7 +1,6 @@
 import { Store } from './../../../shared/models/store.interface';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { User } from 'src/app/shared/models/user.interface';
 import { DataService } from 'src/app/shared/services/data.services';
 
 @Injectable({

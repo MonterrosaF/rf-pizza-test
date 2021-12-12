@@ -20,8 +20,6 @@ export class StoresComponent implements OnInit {
 
   constructor(
     private toastr: ToastrService,
-    private authService: AuthService,
-    private route: Router,
     private storesService: StoresService,
     private fb: FormBuilder,
   ) {
