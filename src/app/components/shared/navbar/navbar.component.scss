@@ -1,0 +1,76 @@
+@import "./../../../../assets/scss/_variables.scss";
+
+nav {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  float: right;
+  background-color: transparent;
+  max-height: 10vh;
+  color: $subtitles-color;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pizza-image-background {
+  cursor: pointer;
+
+  img {
+    max-width: 110px;
+    width: 10vw;
+    margin-top: 4vw;
+    margin-left: 10vw;
+    position: fixed;
+  }
+}
+
+.router {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+  section {
+    margin-top: 50px;
+    margin-left: 3.5rem;
+
+    a {
+      text-decoration: none;
+      color: $subtitles-color;
+      background-image: linear-gradient($primary-color, $primary-color);
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-size: 0% 10px;
+      transition: all .3s;
+
+      &:hover {
+        background-size: 150% 6px;
+      }
+    }
+  }
+}
+
+.logout {
+  font-size: 15px;
+  margin-right: 3vw;
+  margin-top: 5%;
+  cursor: pointer;
+
+  i {
+    color: black;
+    margin-right: 10px;
+  }
+}
+
+@media screen and(max-width: $breakpoint-laptop-sm) {
+
+  .pizza-image-background,
+  .menu {
+    display: none;
+  }
+
+  .router{
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

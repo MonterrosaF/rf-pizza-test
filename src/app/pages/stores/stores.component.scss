@@ -1,0 +1,56 @@
+@import './../../../assets/scss/_variables.scss';
+
+main {
+  max-height: 100vh;
+}
+
+.stores-title {
+  text-align: start;
+  font-size: 2rem;
+  margin-left: 3.5rem;
+  margin: 12% 3.5rem 5%;
+
+  h1 {
+    margin-top: 6rem;
+    font-weight: 500;
+    margin-bottom: -3px;
+  }
+
+  span {
+    color: #969696;
+    font-size: 0.9rem;
+  }
+}
+
+.stores-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-evenly;
+  height: 65vh;
+  overflow: scroll;
+}
+
+.search-store {
+  text-align: center;
+  input {
+    border: 1px solid;
+    border-radius: 20px;
+    height: 2rem;
+    padding: 0 10px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptop-sm) {
+  h1 {
+    margin-bottom: -10px;
+  }
+
+  .search-store {
+    input {
+      margin-top: 20px;
+    }
+  }
+}

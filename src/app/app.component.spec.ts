@@ -26,10 +26,18 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('rf-pizza-test');
   });
 
-  it('should render title', () => {
+  it(`APP - Variable title debe verse correctamente despues de OnInit`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('rf-pizza-test app is running!');
+    const app = fixture.componentInstance;
+    app.ngOnInit();
+    expect(app.title).toBe('rf-pizza-test');
   });
+
+  it(`APP - Instancia correcta de ngAfterContentChecked cuando la pagina es /stores'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.ngAfterContentChecked();
+    expect(app.isLoginPage).toBe(false);
+  });
+
 });

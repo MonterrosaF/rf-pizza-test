@@ -1,0 +1,29 @@
+<block-ui>
+  <main>
+    <section class="page-section">
+      <img src="./../../../../assets/images/Login-Best-Pizza.png" alt="Best Pizza Login">
+      <h1>Bienvenido</h1>
+      <h2>A las mejores pizzas del país</h2>
+      <form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <fieldset>
+          <span>
+            <input type="text" formControlName="email" placeholder="Usuario">
+          </span>
+        </fieldset>
+        <fieldset>
+          <span>
+            <input [type]="isShowingPass ? 'text' : 'password'" formControlName="password" placeholder="Contraseña">
+            <i *ngIf="isShowingPass" (click)="isShowingPassword()" class="fas fa-eye show-password"></i>
+            <i *ngIf="!isShowingPass"  (click)="isShowingPassword()" class="fas fa-eye-slash hide-password"></i>
+          </span>
+        </fieldset>
+        <span>
+          <a href="/login">¿Olvidaste tu contraseña?</a>
+        </span>
+        <button type="submit" [disabled]="!loginForm.valid">
+          Iniciar sesión
+        </button>
+      </form>
+    </section>
+  </main>
+</block-ui>

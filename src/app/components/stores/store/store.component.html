@@ -1,0 +1,12 @@
+<section class="store-main">
+  <div class="single-store">
+    <img src="./../../../../assets/images/{{ storeData.name }}.png" alt="" />
+    <div class="overlay-description overlay-description-blur">
+      <button mat-raised-button (click)="openModal()"> <span>VISTA RÁPIDA</span><img src="./../../../../assets/images/ojo-rojo.png"></button>
+      <button mat-stroked-button disabled> COMPRA RÁPIDA</button>
+      <!-- <p class="store-description">{{storeData.description}}</p> -->
+    </div>
+  </div>
+  <p>{{ storeData.name }}</p>
+  <sub>{{ storeData.address }}</sub>
+</section>

@@ -1,0 +1,44 @@
+@import "./../../../../assets/scss/_variables.scss";
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0;
+  min-width: 50vw;
+  max-width: 40vw;
+  float: right;
+  background-color: #1f1f1f;
+  max-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    color: white;
+    font-size: 30px;
+    margin: 20px 0 0 10px;
+    transition: all .3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+#social-media {
+  margin-left: 10%;
+}
+
+footer img {
+  max-width: 65px;
+  padding: 20px 0;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+@media screen and(max-width: $breakpoint-laptop-sm) {
+
+  footer{
+    width: 100%;
+    max-width: initial;
+  }
+}
