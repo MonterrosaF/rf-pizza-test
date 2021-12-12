@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  isShowingPass: boolean = false
 
   @BlockUI() blockUI: NgBlockUI;
   constructor(private authService: AuthService, private fb: FormBuilder, private route:Router) {
@@ -37,12 +38,16 @@ export class LoginComponent implements OnInit {
       .then((e) => this.route.navigate(['/stores']))
       .catch((e) => {
         Swal.fire({
-          title: 'Error!',
+          iconHtml: '<i style="color:#fac344" class="far fa-frown-open"></i>',
           text: e,
-          icon: 'error',
+          // icon: 'error',
           confirmButtonColor: '#fac344'
         });
       })
       .finally(() => this.blockUI.stop());
+  }
+
+  isShowingPassword():void{
+    this.isShowingPass = !this.isShowingPass
   }
 }

@@ -1,6 +1,16 @@
 @import "./assets/scss/_variables.scss";
 
 @font-face {
+  font-family: MinionBoldItalic;
+  src: url(./assets/fonts/Minion/Minion.otf) format("opentype");
+}
+
+@font-face {
+  font-family: CopperplateRegular;
+  src: url(./assets/fonts/Copperplate/Copperplate.ttf) format("truetype");
+}
+
+@font-face {
   font-family: KhulaBold;
   src: url(./assets/fonts/Khula/Khula-Bold.ttf) format("truetype");
 }

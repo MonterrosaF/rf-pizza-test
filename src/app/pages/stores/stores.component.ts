@@ -29,9 +29,9 @@ export class StoresComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    this.blockUI.start('Loading...');
+    this.blockUI.start('Cargando...');
     let userName: string = JSON.parse(localStorage.getItem('token')).name;
-    this.toastr.success(`¡Hola de nuevo ${userName}.`, '¡Bienvenido!');
+    this.toastr.success(``, `¡Bienvenido de nuevo ${userName}!`);
     this.storesList = await this.storesService.getStoresFromJSON()
     if(this.storesList.length == 5){
       let newStore:Store ={

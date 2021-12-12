@@ -11,6 +11,7 @@ main {
   margin: 12% 3.5rem 5%;
 
   h1 {
+    margin-top: 6rem;
     font-weight: 500;
     margin-bottom: -3px;
   }
@@ -39,5 +40,17 @@ main {
     height: 2rem;
     padding: 0 10px;
     width: 80%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-laptop-sm) {
+  h1 {
+    margin-bottom: -10px;
+  }
+
+  .search-store {
+    input {
+      margin-top: 20px;
+    }
   }
 }

@@ -12,7 +12,9 @@
         </fieldset>
         <fieldset>
           <span>
-            <input type="password" formControlName="password" placeholder="Contraseña">
+            <input [type]="isShowingPass ? 'text' : 'password'" formControlName="password" placeholder="Contraseña">
+            <i *ngIf="isShowingPass" (click)="isShowingPassword()" class="fas fa-eye show-password"></i>
+            <i *ngIf="!isShowingPass"  (click)="isShowingPassword()" class="fas fa-eye-slash hide-password"></i>
           </span>
         </fieldset>
         <span>

@@ -1,7 +1,6 @@
 @import './../../../../assets/scss/_variables.scss';
 
 section {
-  display: flex;
   position: relative;
   width: 100%;
   height: 100%;
@@ -12,8 +11,40 @@ section {
   height: 100%;
 
   img {
-    width: 100%;
-    height: 100%;
+    margin: -40px;
+    width: 46vw;
+    height: 70vh;
+  }
+
+}
+
+.menu-info {
+  flex-wrap: wrap;
+  .menu {
+    margin-top: 3rem;
+    ul:hover {
+      background-color: $primary-color;
+    }
+  }
+  .see-more{
+    display: block;
+    background-color: $primary-color;
+    margin-top: 3rem;
+  }
+  .see-more:hover{
+    cursor: not-allowed;
+  }
+}
+
+.store-info {
+  h1 {
+    font-family: CopperplateRegular;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: MinionBoldItalic;
+    text-align: center;
   }
 }
 
@@ -32,6 +63,9 @@ section {
 
 .menu-info {
   overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
   ul li button {
     width: 100%;
@@ -54,16 +88,17 @@ section {
   }
 
   .store-info {
+    height: 100%;
     h1 {
       margin-top: 20px;
       text-transform: uppercase;
       text-align: center;
-      font-size: 7vw;
+      font-size: 4vw;
       margin-bottom: 20px;
     }
 
     h3 {
-      font-size: 4.5vw;
+      font-size: 3.5vw;
       font-weight: normal;
       margin-bottom: 20px;
     }
@@ -73,9 +108,24 @@ section {
       margin-bottom: 20px;
     }
   }
+
+  .background-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .menu{
+    z-index: 2;
+  }
+
 }
 
 @media screen and (min-width:$breakpoint-laptop-sm) {
+
+  section {
+    display: flex;
+    justify-content: center;
+  }
 
   ::ng-deep .cdk-overlay-pane {
     max-height: 65vh !important;
@@ -93,7 +143,7 @@ section {
       margin-top: 20px;
       text-transform: uppercase;
       text-align: center;
-      font-size: 4vw;
+      font-size: 2vw;
       margin-bottom: 20px;
     }
 
@@ -117,9 +167,10 @@ section {
       .menu {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         ul {
-          width: 100%;
+          width: 60%;
           // margin: 5px 5px;
         }
       }
@@ -127,16 +178,16 @@ section {
   }
 }
 
-@media screen and (min-width:$breakpoint-laptop-m) {
+// @media screen and (min-width:$breakpoint-laptop-m) {
 
-  .store-info {
-    .menu-info {
-      .menu {
-        ul {
-          width: 45%;
-          margin: 5px 5px;
-        }
-      }
-    }
-  }
-}
+//   .store-info {
+//     .menu-info {
+//       .menu {
+//         ul {
+//           width: 45%;
+//           margin: 5px 5px;
+//         }
+//       }
+//     }
+//   }
+// }

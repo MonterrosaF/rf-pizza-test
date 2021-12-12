@@ -7,12 +7,13 @@
     <h3>{{ storeData.description }}</h3>
 
     <div class="menu-info">
-      <p>Nuestros productos son:</p>
+      <!-- <p>Nuestros productos son:</p> -->
       <div class="menu">
         <ul class="animate__animated animate__zoomIn" *ngFor="let item of storeData.products">
           <li> <button mat-stroked-button> {{ item.name }} </button></li>
         </ul>
       </div>
+        <button class="see-more" mat-stroked-button> Ver más </button>
     </div>
   </div>
   <div class="background-image" [ngStyle]="{'background-image': getUrl()}"></div>
